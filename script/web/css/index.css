@@ -1,0 +1,195 @@
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text-primary);
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+/* =================================
+   CONTAINER PRINCIPAL
+================================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 30px 40px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =================================
+   CABEÇALHO
+================================= */
+
+.header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 25px;
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+
+    transition:
+        background 0.2s ease,
+        border 0.2s ease;
+}
+
+/* =================================
+   SAUDAÇÃO
+================================= */
+
+.header-esquerda {
+    display: flex;
+    align-items: center;
+}
+
+.header-esquerda h1 {
+    font-size: 24px;
+    font-weight: 600;
+
+    color: var(--color-text-primary);
+}
+
+#nome-usuario {
+    color: var(--color-primary);
+}
+
+/* =================================
+   CONFIGURAÇÕES
+================================= */
+
+.header-direita {
+    display: flex;
+    align-items: center;
+}
+
+.header-direita nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-direita nav a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--color-surface-hover);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.header-direita nav a:hover {
+    background: var(--color-border);
+}
+
+.icone-configuracoes {
+    width: 22px;
+    height: 22px;
+
+    object-fit: contain;
+    flex-shrink: 0;
+
+    /* Filtro para combinar com a cor primária */
+    filter: invert(31%) sepia(96%) saturate(1800%)
+            hue-rotate(252deg) brightness(95%) contrast(105%);
+
+    transition: transform 0.3s ease;
+}
+
+.header-direita nav a:hover .icone-configuracoes {
+    transform: rotate(45deg);
+}
+
+/* =================================
+   CONTEÚDO PRINCIPAL
+================================= */
+
+.conteudo-principal {
+    width: 100%;
+    flex: 1;
+
+    margin-top: 25px;
+}
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .header {
+        padding: 18px;
+    }
+
+    .header-esquerda h1 {
+        font-size: 21px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 15px;
+    }
+
+    .header {
+        padding: 15px;
+    }
+
+    .header-esquerda h1 {
+        font-size: 18px;
+    }
+
+    .header-direita nav a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .icone-configuracoes {
+        width: 20px;
+        height: 20px;
+    }
+
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Configuração inicial | Postgre</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/setup.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- PROGRESSO -->
+        <div class="progress">
+
+            <div class="progress-line" id="progressLine"></div>
+
+            <div class="step active">
+                <div class="circle">1</div>
+                <p>Início</p>
+            </div>
+
+            <div class="step">
+                <div class="circle">2</div>
+                <p>Usuário</p>
+            </div>
+
+            <div class="step">
+                <div class="circle">3</div>
+                <p>Aparência</p>
+            </div>
+
+            <div class="step">
+                <div class="circle">4</div>
+                <p>Acessibilidade</p>
+            </div>
+
+            <div class="step">
+                <div class="circle">5</div>
+                <p>Revisão</p>
+            </div>
+
+        </div>
+
+        <!-- ETAPA 1: INÍCIO -->
+        <section class="page active">
+
+            <h1>Seja bem-vindo!</h1>
+
+            <p>Vamos personalizar seu aplicativo.</p>
+
+            <p>
+                Configure suas preferências para deixar
+                o Postgre do seu jeito.
+            </p>
+
+        </section>
+
+        <!-- ETAPA 2: USUÁRIO -->
+        <section class="page">
+
+            <h1>Qual é o seu nome?</h1>
+
+            <p>Como gostaria de ser chamado pelo aplicativo?</p>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome"
+                maxlength="50"
+                autocomplete="name"
+            >
+
+        </section>
+
+        <!-- ETAPA 3: APARÊNCIA -->
+        <section class="page">
+
+            <h1>Personalize sua aparência</h1>
+
+            <p>Escolha o tema visual da aplicação.</p>
+
+            <select id="tema">
+                <option value="light">Claro</option>
+                <option value="dark">Escuro</option>
+            </select>
+
+        </section>
+
+        <!-- ETAPA 4: ACESSIBILIDADE -->
+        <section class="page">
+
+            <h1>Acessibilidade</h1>
+
+            <p>
+                Escolha o tamanho da fonte que proporciona
+                melhor experiência de leitura.
+            </p>
+
+            <div class="eye-container">
+
+                <span class="eye">👁️</span>
+
+                <span class="eye-label">
+                    Visualização da fonte
+                </span>
+
+            </div>
+
+            <div class="font-preview">
+
+                <span id="fontValue">18px</span>
+
+                <p id="previewText">
+                    Este é um exemplo de como o texto aparecerá
+                    no aplicativo Postgre.
+                </p>
+
+            </div>
+
+            <input
+                type="range"
+                id="fonte"
+                min="12"
+                max="24"
+                step="6"
+                value="18"
+            >
+
+            <div class="range-labels">
+                <span>Pequeno</span>
+                <span>Médio</span>
+                <span>Grande</span>
+            </div>
+
+        </section>
+
+        <!-- ETAPA 5: REVISÃO -->
+        <section class="page">
+
+            <h1>Revise suas configurações</h1>
+
+            <p>
+                Confira suas preferências antes de finalizar.
+            </p>
+
+            <div class="review-card">
+
+                <div class="review-item">
+
+                    <img
+                        src=".assets/icons/person.svg"
+                        alt=""
+                        class="review-icon"
+                    >
+
+                    <div>
+                        <small>Nome do usuário</small>
+                        <strong id="reviewNome">Não informado</strong>
+                    </div>
+
+                </div>
+
+                <div class="review-item">
+
+                    <img
+                        src=".assets/icons/opacity.svg"
+                        alt=""
+                        class="review-icon"
+                    >
+
+                    <div>
+                        <small>Tema visual</small>
+                        <strong id="reviewTema">Claro</strong>
+                    </div>
+
+                </div>
+
+                <div class="review-item">
+
+                    <img
+                        src=".assets/icons/format-size.svg"
+                        alt=""
+                        class="review-icon"
+                    >
+
+                    <div>
+                        <small>Tamanho da fonte</small>
+                        <strong id="reviewFonte">Médio (18px)</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="review-message">
+                Tudo certo? Clique em Finalizar para salvar
+                suas configurações.
+            </p>
+
+        </section>
+
+        <!-- NAVEGAÇÃO -->
+        <div class="buttons">
+
+            <button
+                type="button"
+                class="back"
+                id="back"
+                disabled
+            >
+                Voltar
+            </button>
+
+            <button
+                type="button"
+                class="next"
+                id="next"
+            >
+                Vamos lá!
+            </button>
+
+        </div>
+
+        <!-- RODAPÉ -->
+        <footer class="footer">
+            Postgre - Configuração inicial
+        </footer>
+
+    </main>
+
+    <script src="js/setup.js"></script>
+
+</body>
+</html>

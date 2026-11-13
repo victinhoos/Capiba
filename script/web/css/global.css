@@ -1,0 +1,101 @@
+/* =================================
+   TEMA CLARO
+================================= */
+
+:root,
+:root[data-theme="light"] {
+    color-scheme: light;
+
+    /* Cores principais */
+    --color-primary: #7C3AED;
+    --color-primary-hover: #6D28D9;
+
+    /* Cores secundárias */
+    --color-secondary: #8B5CF6;
+    --color-secondary-hover: #7C3AED;
+
+    /* Fundos */
+    --color-background: #FAFAFC;
+    --color-surface: #FFFFFF;
+    --color-surface-hover: #F3F4F6;
+
+    /* Textos */
+    --color-text-primary: #1F2937;
+    --color-text-secondary: #6B7280;
+
+    /* Bordas */
+    --color-border: #E5E7EB;
+
+    /* Estados */
+    --color-success: #7C3AED;
+    --color-warning: #D97706;
+    --color-danger: #DC2626;
+
+    /* Tipografia */
+    --font-family: "Roboto", sans-serif;
+    --font-size-base: 16px;
+
+    /* Formas */
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+}
+
+
+/* =================================
+   TEMA ESCURO
+================================= */
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+
+    /* Cores principais */
+    --color-primary: #A78BFA;
+    --color-primary-hover: #8B5CF6;
+
+    /* Cores secundárias */
+    --color-secondary: #2DD4BF;
+    --color-secondary-hover: #14B8A6;
+
+    /* Fundos */
+    --color-background: #111118;
+    --color-surface: #1C1B24;
+    --color-surface-hover: #292735;
+
+    /* Textos */
+    --color-text-primary: #F9FAFB;
+    --color-text-secondary: #A1A1AA;
+
+    /* Bordas */
+    --color-border: #383545;
+
+    /* Estados */
+    --color-success: #4ADE80;
+    --color-warning: #FBBF24;
+    --color-danger: #F87171;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+button {
+    font-family: inherit;
+}
+
+.card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+}
